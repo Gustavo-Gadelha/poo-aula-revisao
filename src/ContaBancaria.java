@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 
 public class ContaBancaria {
-    Pessoa titular;
-    double saldo;
-    double limite;
-    ArrayList<String> historico;
+    public Pessoa titular;
+    public double saldo;
+    public double limite;
+    public ArrayList<String> historico;
+    public static ArrayList<ContaBancaria> listaDeContas = new ArrayList<>();
 
-    ContaBancaria(Pessoa titular) {
+    public ContaBancaria(Pessoa titular) {
         this.titular = titular;
         this.saldo = 0;
         this.limite = 1000;
         this.historico = new ArrayList<>();
+        ContaBancaria.listaDeContas.add(this);
     }
 
     public boolean depositar(double valor) {

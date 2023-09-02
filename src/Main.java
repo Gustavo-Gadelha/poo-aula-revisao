@@ -12,5 +12,6 @@ public class Main {
         System.out.println("Saldo da conta1: " + conta1.saldo);
         System.out.println("Saldo da conta2: " + conta2.saldo);
         conta1.exibirHistorico();
+
     }
 }
